@@ -1,0 +1,82 @@
+body {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(
+    circle,
+    rgba(18, 34, 50, 1) 0%,
+    rgba(12, 11, 16, 1) 100%
+  );
+  overflow: hidden;
+}
+
+.container {
+  position: relative;
+}
+
+.text {
+  font-family: "Luckiest Guy", cursive;
+  font-size: 50px;
+  line-height: 1;
+  color: #eaf0f0;
+}
+
+.back .text {
+  /* opacity: 0.1;
+  filter: blur(2px); */
+  opacity: 1;
+}
+
+.front {
+  position: absolute;
+  top: -50%;
+  width: 100%;
+  height: 200%;
+  /* background-color: rgba(255, 0, 0, 0.1); */
+  transform: rotate(2deg);
+}
+
+.front .up,
+.front .down {
+  position: relative;
+  height: 50%;
+  overflow: hidden;
+}
+
+/* .front .down {
+  background-color: rgba(255, 0, 0, 0.2);
+} */
+
+.up .text,
+.down .text {
+  position: absolute;
+  transform: rotate(-2deg);
+}
+
+.up .text {
+  top: 50%;
+}
+.down .text {
+  top: -50%;
+}
+
+.line {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 200%;
+  height: 1px;
+  transform: translate(-50%, -50%) rotate(2deg);
+}
+
+.line span {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #eaf0f0;
+}
