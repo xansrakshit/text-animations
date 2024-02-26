@@ -1,22 +1,36 @@
 body {
   padding: 0;
   margin: 0;
-  height: 100vh;
-  display: flex;
+  /* height: 100vh; */
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
   background: radial-gradient(
     circle,
     rgba(18, 34, 50, 1) 0%,
     rgba(12, 11, 16, 1) 100%
   );
-  overflow: hidden;
+  /* overflow: hidden; */
 }
-
+.section-1 {
+  /* position: relative; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+.section-2 {
+  /* position: relative; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
 .container {
-  position: relative;
+  position: absolute;
 }
-
 .text {
   font-family: "Luckiest Guy", cursive;
   font-size: 50px;
@@ -25,9 +39,7 @@ body {
 }
 
 .back .text {
-  /* opacity: 0.1;
-  filter: blur(2px); */
-  opacity: 1;
+  opacity: 0;
 }
 
 .front {
@@ -36,7 +48,14 @@ body {
   width: 100%;
   height: 200%;
   /* background-color: rgba(255, 0, 0, 0.1); */
-  transform: rotate(2deg);
+  /* transform: rotate(2deg); */
+}
+
+.front .up {
+  /* background-color: #8fbc8f; */
+}
+.front .down {
+  /* background-color: #f08080; */
 }
 
 .front .up,
@@ -44,23 +63,24 @@ body {
   position: relative;
   height: 50%;
   overflow: hidden;
+  /* background-color: rgba(255, 0, 0, 0.1); */
 }
-
-/* .front .down {
+/* 
+.front .down {
   background-color: rgba(255, 0, 0, 0.2);
 } */
 
 .up .text,
 .down .text {
   position: absolute;
-  transform: rotate(-2deg);
+  /* transform: rotate(-2deg); */
 }
 
 .up .text {
-  top: 50%;
+  top: 60%;
 }
 .down .text {
-  top: -50%;
+  top: -40%;
 }
 
 .line {
@@ -69,7 +89,8 @@ body {
   top: 50%;
   width: 200%;
   height: 1px;
-  transform: translate(-50%, -50%) rotate(2deg);
+  transform: translate(-50%, -50%);
+  /* rotate(2deg); */
 }
 
 .line span {
@@ -80,3 +101,25 @@ body {
   bottom: 0;
   background-color: #eaf0f0;
 }
+
+.section-1 .single {
+  top: 25%;
+}
+.section-1 .single .first {
+  position: relative;
+  /* top: 25%; */
+  margin-bottom: 15%;
+}
+.section-1 .single .first .text {
+  /* font-weight: 100; */
+  font-size: 1.8rem;
+}
+.section-1 .single .second .text {
+  font-size: 2.1rem;
+}
+
+.single-1 .text {
+  font-size: 2.1rem;
+  
+}
+
